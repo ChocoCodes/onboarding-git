@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-google-sans: "Google Sans", Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Webkit browsers: Chrome, Safari, Edge */
+.scroll-container::-webkit-scrollbar {
+  width: 12px;              /* width of the vertical scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #333;         /* track color */
+  border-radius: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #000;   /* thumb color */
+  border-radius: 6px;
+  border: 3px solid #555;   /* space around thumb */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #444;   /* hover effect */
+}
+
+/* Firefox */
+.scroll-container {
+  scrollbar-width: thin;       /* auto, thin, none */
+  scrollbar-color: #000 #333;  /* thumb track */
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(10px);          /* blur the background */
+  -webkit-backdrop-filter: blur(10px);  /* Safari */
+  border-radius: 20px;                  /* rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+}
