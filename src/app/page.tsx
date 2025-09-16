@@ -56,7 +56,7 @@ export default function Home() {
 			<h1 className='font-bold text-3xl text-center'>Onboarding Session Profiles</h1>
 			<button onClick={ handleGetInfo } className='bg-blue-500 rounded-md py-2 px-4 hover:cursor-pointer hover:bg-blue-600'>Get Info</button>
 		</div>
-		<div className={`scroll-container flex flex-wrap w-3/5 h-4/5 mx-auto gap-5 items-center ${members.length > 1 ? 'justify-between' : 'justify-center' } p-4 overflow-y-auto`}>
+		<div className={`scroll-container flex flex-wrap w-3/5 h-4/5 mx-auto gap-5 items-center ${members.length > 1 ? 'justify-between' : 'justify-center' } items-start content-start p-4 overflow-y-auto`}>
 			{ members.map((member, index) => (
 					<InfoCard key={ index } { ...member } />
 				))

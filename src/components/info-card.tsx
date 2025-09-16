@@ -14,7 +14,8 @@ const InfoCard = ({
             web: 'bg-blue-500',
             ai: 'bg-yellow-500',
             uiux: 'bg-red-500',
-            game: 'bg-green-500'
+            game: 'bg-green-500',
+            executive: 'bg-[#BF00FF]'
         }
 
         const deptLower = department.toLowerCase()
@@ -32,7 +33,7 @@ const InfoCard = ({
                     <p className="text-lg text-gray-300">{ age } years old</p>
                 </div>
                 <div>
-                    <p className={`px-3 py-1 inline-block ${ mapColors(department) } rounded-full text-sm`}>{ position } - { department }</p>
+                    <p className={`px-3 py-1 inline-block ${ mapColors(department) } text-background rounded-full text-sm`}>{ position } - { department }</p>
                 </div>
             </div>
             <div className="flex flex-col gap-1">
