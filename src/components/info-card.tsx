@@ -28,7 +28,7 @@ const InfoCard = ({
     return (
         <div className="flex flex-col gap-3 w-full lg:w-[48%] p-6 rounded-lg glass-card">
             <div className="flex flex-col gap-3">
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                     <h2 className="font-bold text-2xl">{ name }</h2>
                     <p className="text-md text-gray-300">{ age } years old</p>
                 </div>
