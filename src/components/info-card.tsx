@@ -26,14 +26,14 @@ const InfoCard = ({
         return 'bg-gray-500'
     }
     return (
-        <div className="flex flex-col gap-3 w-[48%] p-6 rounded-lg glass-card">
-            <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3 w-full lg:w-[48%] p-6 rounded-lg glass-card">
+            <div className="flex flex-col gap-3">
                 <div className="flex justify-between">
                     <h2 className="font-bold text-2xl">{ name }</h2>
-                    <p className="text-lg text-gray-300">{ age } years old</p>
+                    <p className="text-md text-gray-300">{ age } years old</p>
                 </div>
                 <div>
-                    <p className={`px-3 py-1 inline-block ${ mapColors(department) } text-background rounded-full text-sm`}>{ position } - { department }</p>
+                    <p className={`px-4 py-1 inline-block ${ mapColors(department) } text-background rounded-full text-sm`}>{ position } - { department }</p>
                 </div>
             </div>
             <div className="flex flex-col gap-1">
@@ -44,7 +44,7 @@ const InfoCard = ({
                 <p className="text-xl">Fun Fact!</p>
                 <p className="text-md text-gray-300">{ funFact }</p>
             </div>
-            <p>Contact me via: <span className="text-gray-300">{ email }</span></p>
+            <p>Contact me via: <span className="text-gray-300 underline">{ email }</span></p>
         </div>
     )
 }
