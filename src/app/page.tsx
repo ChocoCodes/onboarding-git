@@ -51,12 +51,12 @@ export default function Home() {
 
     return (
       <main className="w-screen h-screen flex flex-col items-center justify-between my-auto overflow-x-hidden py-10 font-google-sans">
-		<div className="flex w-3/5 justify-between items-center px-4 my-auto">
-			<div className='w-4'></div>
+		<div className="flex flex-col lg:flex-row w-[90%] lg:w-3/5 gap-3 justify-between items-center px-4 my-auto">
+			<div className='hidden lg:block w-4'></div>
 			<h1 className='font-bold text-3xl text-center'>Onboarding Session Profiles</h1>
 			<button onClick={ handleGetInfo } className='bg-blue-500 rounded-md py-2 px-4 hover:cursor-pointer hover:bg-blue-600'>Get Info</button>
 		</div>
-		<div className={`scroll-container flex flex-wrap w-3/5 h-4/5 mx-auto gap-5 items-center ${members.length > 1 ? 'justify-between' : 'justify-center' } items-start content-start p-4 overflow-y-auto`}>
+		<div className={`scroll-container flex flex-wrap sm:w-9/10 lg:w-3/5 h-4/5 mx-auto gap-5 items-center ${ members.length > 1 ? 'justify-between' : 'justify-center' } items-start content-start p-4 overflow-y-auto`}>
 			{ members.map((member, index) => (
 					<InfoCard key={ index } { ...member } />
 				))
